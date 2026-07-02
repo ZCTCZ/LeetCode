@@ -1,56 +1,87 @@
-# Generated from CLion C/C++ Code Style settings
----
+# Google C/C++ Code Style with Attach brace style
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
 Language: Cpp
-BasedOnStyle: LLVM
-AccessModifierOffset: -4
-AlignConsecutiveAssignments: false
-AlignConsecutiveDeclarations: false
-AlignOperands: false
-AlignTrailingComments: false
-AlwaysBreakTemplateDeclarations: Yes
+BasedOnStyle: Google
+
+# === 核心：Attach 花括号风格 ===
+# Attach: 花括号紧跟在控制语句/函数/类等后面，不换行
+BreakBeforeBraces: Attach
 BraceWrapping:
-  AfterCaseLabel: true
-  AfterClass: true
-  AfterControlStatement: true
-  AfterEnum: true
-  AfterFunction: true
-  AfterNamespace: true
-  AfterStruct: true
-  AfterUnion: true
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterStruct: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterUnion: false
   AfterExternBlock: false
-  BeforeCatch: true
-  BeforeElse: true
-  BeforeLambdaBody: true
-  BeforeWhile: true
-  SplitEmptyFunction: true
-  SplitEmptyRecord: true
-  SplitEmptyNamespace: true
-BreakBeforeBraces: Stroustrup
-BreakConstructorInitializers: AfterColon
-BreakConstructorInitializersBeforeComma: false
-ColumnLimit: 120
-ConstructorInitializerAllOnOneLineOrOnePerLine: false
-IncludeCategories:
-  - Regex: "^<.*"
-    Priority: 1
-  - Regex: '^".*'
-    Priority: 2
-  - Regex: ".*"
-    Priority: 3
-IncludeIsMainRegex: "([-_](test|unittest))?$"
-IndentCaseBlocks: true
-IndentWidth: 4
-InsertNewlineAtEOF: true
-MacroBlockBegin: ""
-MacroBlockEnd: ""
-MaxEmptyLinesToKeep: 2
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+# === Google 风格核心设置 ===
+AccessModifierOffset: -1
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: None
+AlignOperands: Align
+AllowAllArgumentsOnNextLine: true
+AllowAllConstructorInitializersOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterReturnType: None
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: true
+BreakBeforeBinaryOperators: None
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+ColumnLimit: 100
+CompactNamespaces: false
+ContinuationIndentWidth: 4
+Cpp11BracedListStyle: true
+DerivePointerAlignment: false
+EmptyLineBeforeAccessModifier: LogicalBlock
+FixNamespaceComments: true
+IncludeBlocks: Preserve
+IndentCaseLabels: true
+IndentPPDirectives: None
+IndentWidth: 2
+KeepEmptyLinesAtTheStartOfBlocks: true
+MaxEmptyLinesToKeep: 1
 NamespaceIndentation: None
+ObjCSpaceAfterProperty: false
+ObjCSpaceBeforeProtocolList: true
 PointerAlignment: Left
-SortIncludes: true
+ReflowComments: false
+SeparateDefinitionBlocks: Always   # clang-format 14+
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
 SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
 SpacesInAngles: false
-SpacesInConditionalStatement: false
 SpacesInCStyleCastParentheses: false
+SpacesInContainerLiterals: false
 SpacesInParentheses: false
-TabWidth: 4
-...
+SpacesInSquareBrackets: false
+Standard: c++17
+TabWidth: 2
+UseTab: Never

@@ -5,4 +5,4 @@ CompileFlags:
     - -Wunused-parameter
     - -Wundefined-internal
   BuiltinHeaders: QueryDriver
-  Compiler: /usr/bin/clang++-21
+  Compiler: C:\\msys64\\ucrt64\\bin\\g++.exe
