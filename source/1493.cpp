@@ -3,8 +3,8 @@
 #include <vector>
 
 class Solution {
- public:
-  int longestSubarray(std::vector<int>& nums) {
+public:
+  int longestSubarray(std::vector<int> &nums) {
     int n = nums.size();
     if (n == 0 || n == 1) {
       return n;
@@ -35,7 +35,7 @@ class Solution {
   }
 };
 
-int main(int /*argc*/, char* /*arcv*/[]) {
+int main(int /*argc*/, char * /*arcv*/[]) {
   std::vector<int> nums{1, 1, 0, 1};
   std::println("{}", Solution().longestSubarray(nums));
   return 0;

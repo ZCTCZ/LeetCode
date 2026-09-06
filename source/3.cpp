@@ -4,8 +4,8 @@
 #include <string>
 
 class Solution {
- public:
-  int lengthOfLongestSubstring(std::string& s) {
+public:
+  int lengthOfLongestSubstring(std::string &s) {
     int n = s.size();
     if (n == 0) {
       return 0;
@@ -20,7 +20,7 @@ class Solution {
       // s[right] 已经在子串 s[left : right) 里出现过
       if (position_record[s[right]] != -1 && position_record[s[right]] >= left) {
         ans = std::max(ans, right - left);
-        left = position_record[s[right]] + 1;  // 更新窗口左边界
+        left = position_record[s[right]] + 1; // 更新窗口左边界
         position_record[s[right]] = right;
         ++right;
       } else {
@@ -34,7 +34,7 @@ class Solution {
   }
 };
 
-int main(int /*argc*/, char* /*arcv*/[]) {
+int main(int /*argc*/, char * /*arcv*/[]) {
   std::string s{" "};
   std::println("{}", Solution().lengthOfLongestSubstring(s));
   return 0;

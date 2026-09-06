@@ -4,7 +4,7 @@
 #include <string>
 
 class Solution {
- public:
+public:
   int maximumLengthSubstring(std::string s) {
     int n = s.size();
     if (n == 0) {
@@ -34,7 +34,7 @@ class Solution {
   }
 };
 
-int main(int /*argc*/, char* /*arcv*/[]) {
+int main(int /*argc*/, char * /*arcv*/[]) {
   std::println("{}", Solution().maximumLengthSubstring("bcbbbcba"));
   return 0;
 }

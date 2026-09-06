@@ -4,7 +4,7 @@
 #include <vector>
 
 class Solution {
- public:
+public:
   int maxNumberOfBalloons(std::string text) {
     std::array<int, 26> count{};
 
