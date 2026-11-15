@@ -34,7 +34,7 @@ public:
   }
 };
 
-int main(int /*argc*/, char * /*arcv*/[]) {
+int main(int /*argc*/, char * /*argv*/[]) {
   std::string s{" "};
   std::println("{}", Solution().lengthOfLongestSubstring(s));
   return 0;
